@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timetable Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Daily Timetable</h1>
+
+    <!-- Past Data Dropdown -->
+    <label for="pastTimetable">Use Past Data: </label>
+    <select id="pastTimetable">
+      <option value="default">Select past timetable</option>
+      <option value="holiday">Holiday Timetable</option>
+    </select>
+
+    <!-- Past Data Gathering -->
+    <label for="pastDataInput">Gather Past Data: </label>
+    <textarea id="pastDataInput" rows="4" placeholder="Enter your past timetable in 'time: activity' format, one entry per line"></textarea>
+    <button id="gatherPastDataBtn">Gather Data</button>
+
+    <div class="timetable">
+      <table id="timetable">
+        <!-- Refresh Button -->
+        <button id="refreshBtn">Refresh Timetable</button>
+
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Activity</th>
+            <th>Edit</th>
+            <th>Select Row</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Timetable will be dynamically generated here -->
+        </tbody>
+      </table>
+    </div>
+
+    <button id="generateBtn">Generate Timetable</button>
+    <button id="copyBtn" style="display:none;">Copy Timetable</button>
+
+    <!-- Comment Section -->
+    <div class="comment-section">
+      <label for="commentBox">Comment Box (For Selected Row): </label>
+      <input type="text" id="commentBox" placeholder="Enter your comment">
+      <button id="applyCommentBtn">Apply Comment</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

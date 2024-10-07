@@ -1,0 +1,83 @@
+/* Body content centered vertically and horizontally */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+  overflow: auto; /* Enables scrolling if content is too long */
+}
+
+.container {
+  width: 80%;
+  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 20px auto; /* Adds space above and below the container */
+}
+
+.comment-section {
+  margin-top: 20px;
+}
+
+/* Input and select styling */
+input[type="text"], select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Button styling */
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  input[type="text"], select {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+
+/* Gather past data box and button styling */
+#gatherPastDataSection {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+#pastDataInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#gatherPastDataBtn {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
